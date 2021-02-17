@@ -1,0 +1,9 @@
+Code Review: CommitCheck
+
+This plugin allows for consistent commit checks to ensure that they conform with all information required for a commit. 
+It enhances code by making sure there is consistency throughout a project.
+
+Code Quality: TestQuality
+
+This plugin allows developers to build test plans, test cases fast. It measures issues and requirements ran against the test cases. 
+You can automatically import test results from a test runner and can connect with third party services, for example JIRA.
