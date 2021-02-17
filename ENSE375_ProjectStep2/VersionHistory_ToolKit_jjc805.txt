@@ -1,0 +1,64 @@
+Version History:
+Sources: www.git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+
+Version control is a system that tracks and records changes to a set of files over time so you can refer and recall specific versions in the future. 
+As a developer, it is important to have a Version Control System (VCS) set in place. It allows you to revert files back to a previous state, or an entire project. 
+It allows for the use of tracking changes over time, see who has last modified files, and many more. This is crucial because if a developer has caused a problem to a recent file, 
+you can always revert back to a previous version and fix the most recent one. Using a VCS means if there is a problem or if you lose any files, you can easily recover.
+
+There are many people who choose to have a local version-control system, which is to copy files into another directory. 
+This is very common because it is very simple, however there are many errors associated with this method. It can get complicated with what files are where, 
+it is also easy to forget where files are located, and there are chances to replace files, accidently delete files, or copy over files to places you don't need too. 
+On a local machine, when you save a file, the previous version gets altered and it is difficult to recover that old file, unless you make copies of every old file prior. 
+Figure 1 shown below displays how version control works locally.
+
+
+Figure 1: Local version control
+
+
+In industry however, having local files in directories and sharing with a team is a problem. One solution would be to email files, which has many faults associated. 
+To combat this, an elegant solution is to have a Centralized Version Control (CVC) set in place. A CVC system is positioned on a server, where versions of files are stored, 
+tracked and maintained. This is common practice in industry, and has been the standard for many years. Figure 2 shown below highlights how a CVC operates. 
+
+Figure 2: Centralized Version Control
+
+This setup offers many advantages, for example everyone collaborating on a project has to some degree what is going on. There is little overhead, and administrators have control 
+over who can do what. However, there are some faults with this. One notably being that developers rely on a single server. If the server goes down for some amount of time, no work 
+can get done until it gets back up. 
+
+Commit and Merge Histories:
+Source: www.aosabook.org/en/git.html 
+Most VCS software utilize one of the following approaches to track history; Linear history, or an Directed Acyclic Graph (DAG). Git uses a DAG to store its history. 
+Each time there is a commit, the metadata knows about its ancestors. A commit in Git can have zero to many parent commits. Figure 3 shown below shows how Git uses a DAG as 
+its history structure. 
+
+Figure 3: DAG Representation example in Git
+
+Git enables full branching capabilities using DAG’s to store content. The history of a file is linked all the way to the directory structure to the root directory. 
+When merging two branches, you merge the contents of the 2 nodes in a DAG. The DAG allows Git to efficiently see common ancestors.
+
+
+
+The Toolkit:
+Sources: www.aosabook.org/en/git.html 
+Inside Git, there are many command-line and UI tools on various operating systems (including Windows). Most of these tools are built on top of the Git core toolkit. 
+The Git toolkit is composed of two parts which are plumbing and porcelain. The plumbing consists of low-level commands that allow for basic content tracking and manipulation 
+of the DAG’s. The porcelain is the smaller subset of Git commands that most Git users use for maintaining repositories and communicating between repositories.
+Git was originally created for a VCS, rather than a user-friendly VCS. Therefore there are lots of commands that are not user-friendly, which are the plumbing commands. 
+The more user-friendly commands are the porcelain commands.
+
+Examples of Git plumbing commands are:
+Git-apply
+Git-merge-file
+Git-commit-tree
+Git-read-tree
+Git-merge-base
+
+Some examples of user-friendly Git porcelain commands are:
+Git-add
+Git-pull
+Git-push
+Git-init
+Git-status
+Git-help 
+
