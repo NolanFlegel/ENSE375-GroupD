@@ -1,0 +1,94 @@
+Introduction:
+	Version control software (VCS) is a family of programs whose
+ goal is to provide a structured way to save and distribute iterations 
+of a software project. The use of a VCS can improve ease of collaboration,
+ efficiency in workflow, and recovery from bugs and security threats. 
+Collaboration is made easier by granting all contributors the freedom 
+to view and download the entire project, by seeing how their specific work 
+fits in with the bigger picture motivation tends to be higher and the work
+ produced tends to fit better. Workflow efficiency is improved through a 
+combination of better fitting code and the concept of conflict resolution 
+and automated merging of code. Advantages in recovery from bugs and 
+security issues come from the fact that it is so easy to go back a 
+version if something opens up an exploit or breaks something in the code.
+ VCS’ have a lot of upside and should be considered for use in most 
+projects.
+	Git is a popular VCS which uses concurrent versioning (CS) 
+to accomplish its purpose. There are a great deal of aspects which are 
+valuable to examine to both understand the applicability of VCS’ and Git,
+ these include the history of source control, the toolkit, branching, 
+merging, conflict resolution, and extensibility. This paper will discuss 
+these topics and more in detail to present the functionality of Git as 
+well as VCS concepts.
+
+Branching and Merging:
+	Branching and merging form the logical basis of concurrent
+ versioning. While version control systems can be made without concurrent
+ versioning features, collaboration suffers heavily without these features
+. Concurrent versioning systems allow for easy collaboration between 
+multiple parties and gives a way to take a project in multiple directions
+ at the same time, so it is possible to have a release version, 
+development version, and experimental version all in the works in one 
+easy to use version control system. Concurrent versioning is one of the 
+primary advantages of using Git, branching and merging are used to provide
+ structure to this flexible version control system. 
+
+	Git uses a directed acyclic graph (DAG) to store its commit and merge 
+history. This means that every commit and merge can be thought of as a 
+node which holds metadata about its parents. For example a merge of two 
+branches will produce a node (which really represents a directory) with 
+two known parents while a simple commit will typically only have one 
+known parent. Git’s use of DAG’s makes it so history is tracked all the 
+way to the root directory (or first node), this history is linked to every
+ relevant node as commits are added. This makes Git effective for finding
+ common ancestors between nodes which is helpful in merging.
+
+	Branching is the first applied concept that is used for concurrent
+ versioning. Every branch can be forked so multiple edits of a primary 
+branch can happen concurrently, this results in large improvements in 
+efficiency since all contributors can see what has been committed 
+previously. For the developer to know what branch they are working on Git
+ makes use of a pointer called the “HEAD” pointer which points at the 
+branch currently in use. To create a new branch the command “git branch
+ <newBranchName>” must be used, “git branch” with no name included will 
+show all the branches of the project as well as which branch the HEAD 
+pointer is pointing to. The HEAD pointer will not move to a newly created
+ branch unless explicitly commanded to do so, to do this the command
+ “git checkout <branchName>” must be used. Once the HEAD pointer is set 
+to point to a new branch, all commits will be performed on said branch. 
+The diagram below shows a project branching. At times branches will cease
+ being of any use to the project, rather than keeping a collection of 
+dead branches to clutter up the project directories it is possible to 
+delete branches. “Git branch -d <branchName>” allows branches to be 
+deleted, be sure no useful work is being deleted as the delete cannot 
+always be undone!
+
+			
+Diagram Showing Branching from Master into Branch 1 and Branch 2
+
+
+	Branching without the ability to merge is not particularly useful.
+ Merging involves combining multiple branches into a single harmonized 
+version of the project, this entails including all changes made to 
+different files in all branches being merged, not including duplicate
+ work, and using conflict resolution strategies for edits which are 
+incompatible. Edits may be incompatible for a number of reasons, 
+commonly it is because two branches edited the same piece of code in 
+different ways so it must be determined which version should be used.
+ Merging patterns include fast-forward merging and three-way merging.
+ Fast forward merging is when the master branch is left behind by a 
+different branch, by merging the branch which is ahead with the master
+ branch what actually happens is the master “fast forwards” or catches 
+up to the node at the end of the branch being committed. In short, the
+ branch being merged becomes the same as the master branch (see diagram 
+below). Three-way merging is used when parallel branches need to be 
+combined into a single branch (see diagram below). The command for 
+performing a merge is “git merge <branchName>”, Git will automatically
+ use the appropriate merging strategy based on the state of the directory
+ tree (branches).
+
+					
+(Above) Diagram Representing Fast-Forward Merge
+					
+(Below) Diagram Representing Three-way Merge
+
