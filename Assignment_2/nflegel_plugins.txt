@@ -7,3 +7,8 @@ Code Quality:  CommitCheck
 
 Code Review: Typo CI
     Checks code for spelling mistakes and annotes code for review. It works automatically on pull requests.It supports a number of different languages.
+
+
+
+How this affects my code:
+    When I created a commit and pull request for my branch, the plugins checked my commit message and checked my code for spelling mistakes. I received messages in the github UI that marked my pull request as having passed the checks and I can proceed with my pull request and merge my code into the Main branch.
