@@ -1,0 +1,9 @@
+Assignment 2, Part 3: Github plugins.
+
+
+Code Quality:  CommitCheck
+    This app creates hooks for commit messages. It uses regular expressions to check commit messages for known phrases and prevent unwanted pull requests from occurring.
+
+
+Code Review: Typo CI
+    Checks code for spelling mistakes and annotes code for review. It works automatically on pull requests.It supports a number of different languages.
