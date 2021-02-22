@@ -1,0 +1,2 @@
+- name: Yan Create Tag
+  uses: Yanjingzhu/FirstJSAction@v1.3
