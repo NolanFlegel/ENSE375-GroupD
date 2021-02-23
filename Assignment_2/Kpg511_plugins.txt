@@ -1,0 +1,13 @@
+Code Review
+
+Git view
+App showing developer activity and analytics across all projects.
+
+This app shows me statics of the pull requests made and how everyone accross the group is working 
+
+Code Quality 
+
+Pull Request Size
+Applies size labels to each Pull Request based on the total lines of code changed.
+
+This app helps me and other people in this repository identify the size of code they are pulling so that they are aware of how big the file is going to be.
