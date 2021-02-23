@@ -1,0 +1,18 @@
+4.0 Conflict Resolution
+Every modern Version Control System (VCS) has an essential feature that allows multiple developers to work on the same project, at the same time, without conflicting with each other. This feature is implemented by allowing multiple developers to program on a branch locally and giving them the ability to push their changes, once ready, to a central place. These changes can then be pulled by other members in the project back to their own local copy and continue their own work with their collaborators’ changes in place.
+
+    Bringing changes from one branch into another desired branch is done using a merge command. This command will vary depending on the VCS used and it basically collects the changes in all the other branches and applies them over to the current branch. In situations where changes from multiple developers to a file overlaps, the system will have difficulties in processing which version or changes to correctly apply. This is called a merge conflict and when this occurs, it can take a minute or even days to resolve, depending on the amount of files needing to be fixed.
+
+    There is little risk to permanent changes as merges can be undone and reverted to a state before the conflict occurred. In Git, the process is simple and users can input the command “git merge --abort” in their command line terminal.  To resolve a conflict and go through the merge process, developers can take advantage of Git’s mergetool. This tool gives developers a visual representation of the code differences on the command line in the following format: 
+
+LOCAL - the file from the current branch
+BASE - the file before changes in the local and remote branch
+REMOTE - the file to be merged into the local branch
+MERGED - the merge result to be saved in the repository
+
+
+
+
+Figure 2: Merging files from different sources
+
+    As shown in Figure 2, the tool allows a developer to search line by line the differences in changes between the local and remote branch as well as to easily choose which changes to apply to the end result. After cleaning up the conflict in the files line by line, all that is left is to save and do a regular commit.
