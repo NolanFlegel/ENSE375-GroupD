@@ -1,0 +1,7 @@
+Project Step 2 - Task 3: GitHub plugins
+
+Code Review: Hound
+   The plugin reviews your code and leaves suggestive comments in Pull Requests. It enhances code for projects with multiple collaborators for it helps maintain consistent coding style.
+
+Code Quality: Coveralls
+   The plugin shows the parts of the code being committed that are not part of a test coverage criteria. It enhances code being delivered for its capable of finding gaps in the coverage data that a programmer did not know existed.
