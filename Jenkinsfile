@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('shanes-change') {
+      steps {
+        echo 'Shane did a thing'
+      }
+    }
+
   }
 }
