@@ -1,13 +1,13 @@
-package com.uregina.app;
-
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+
+
 
 /**
- * Unit test for RiskCodeMap.
+ * Unit test for PatientList.
  */
-public class RiskCodeMapTest 
+public class PatientListTest 
 {
     /**
      * Rigorous Test :-)

@@ -1,13 +1,13 @@
-package com.uregina.app;
-
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+
+
 
 /**
- * Unit test for PatientList.
+ * Unit test for App.
  */
-public class PatientListTest 
+public class AppTest 
 {
     /**
      * Rigorous Test :-)

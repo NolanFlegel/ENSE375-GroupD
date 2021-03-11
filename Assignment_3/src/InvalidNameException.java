@@ -1,4 +1,4 @@
-package com.uregina.exception;
+
 import java.io.*;
 /**
 * This exception is thrown when an invalid patient name is entered

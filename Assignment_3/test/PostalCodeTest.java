@@ -1,13 +1,13 @@
-package com.uregina.app;
-
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+
+
 
 /**
- * Unit test for PatientHistogram.
+ * Unit test for simple PostalCode.
  */
-public class PatientHistogramTest
+public class PostalCodeTest 
 {
     /**
      * Rigorous Test :-)

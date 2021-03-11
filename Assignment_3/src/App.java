@@ -1,4 +1,3 @@
-package com.uregina.app;
 import java.util.Scanner;
 import java.util.ArrayList;
 import com.uregina.exception.*;

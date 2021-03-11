@@ -1,6 +1,3 @@
-package com.uregina.app;
-import com.uregina.exception.*;
-
 
 public class Patient 
 {

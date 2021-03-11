@@ -1,13 +1,13 @@
-package com.uregina.app;
-
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+
+
 
 /**
- * Unit test for App.
+ * Unit test for RiskCodeMap.
  */
-public class AppTest 
+public class RiskCodeMapTest 
 {
     /**
      * Rigorous Test :-)
