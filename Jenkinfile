@@ -1,0 +1,38 @@
+pipeline {
+  agent {
+    docker {
+      args '-v /root/.m2:/root/.m2'
+      image 'maven:3-alpine'
+    }
+  }
+  stages {
+    stage('Log Versions') {
+      parallel {
+        stage('Log Versions') {
+          steps {
+            sh 'mvn --version'
+          }
+        }
+
+        stage('Check for POM') {
+          steps {
+            fileExists 'pom.xml'
+          }
+        }
+
+      }
+    }
+
+    stage('Change Directory') {
+      steps {
+        sh 'cd RiskMeter'
+      }
+    }
+    stage('Build') {
+      steps {
+        sh 'mvn clean test'
+      }
+    }
+
+  }
+}
