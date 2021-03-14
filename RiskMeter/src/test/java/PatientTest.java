@@ -1,4 +1,10 @@
-<<<<<<< HEAD
+/**
+ * Written by Nolan Flegel
+ * SID: 200250037
+ * Date: March 13, 2021
+ * 
+ * ENSE375 - Group D
+ */
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -141,12 +147,12 @@ public class PatientTest
 
 
     //Cannot be tested until PostalCode is implemented.
-    // @Test
-    // public void setPatientPostalCodeInvalid()throws InvalidNameException, InvalidAgeException ,InvalidIDException, InvalidPostalCodeException
-    // {
-    //       PostalCode postalCode = new PostalCode("K1A-1A1");
-    //       Patient patient = new Patient("Peter", "123456789", 99, postalCode);
-    //       assertFalse(patient.setPostalCode(new PostalCode("A1A-1B1")));
-    // }
+    @Test
+    public void setPatientPostalCodeInvalid()throws InvalidNameException, InvalidAgeException ,InvalidIDException, InvalidPostalCodeException
+    {
+          PostalCode postalCode = new PostalCode("K1A-1A1");
+          Patient patient = new Patient("Peter", "123456789", 99, postalCode);
+          assertFalse(patient.setPostalCode(new PostalCode("A1A-1B1")));
+    }
 }
 
