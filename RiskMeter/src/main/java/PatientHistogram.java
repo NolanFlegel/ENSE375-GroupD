@@ -5,17 +5,11 @@ import java.util.ArrayList;
 //		how many people were in each region.
 public class PatientHistogram 
 {
-	private int[][] patientCount = new patientCount[20][10]; // 20x10 region
+	private int[][] patientCount; // 20x10 region
 
     	public PatientHistogram() 
     	{
-			for(int i = 0; i < patientCount[i].length; i++)
-			{
-				for(int j = 0; j < patientCount[i][j].length; j++)
-				{
-					patientCount[i][j] = 100; //assuming each region has 100 active cases
-				}
-			} 
+			patientCount = new patientCount[20][10];
     	}
     	/**
 	*
@@ -29,6 +23,10 @@ public class PatientHistogram
 			{
 				return true;
 			}
+			else
+			{
+				return false;
+			}
 			
     	}
 	/**
@@ -41,6 +39,10 @@ public class PatientHistogram
     		if(patientCount[VIndex][HIndex] >= 0)
 			{
 				return true;
+			}
+			else
+			{
+				return false;
 			}
     	
     	}
