@@ -9,7 +9,9 @@ public class PatientHistogram
 
     	public PatientHistogram() 
     	{
+
 			this.patientCount = new int[20][10];
+
     	}
     	/**
 	*
