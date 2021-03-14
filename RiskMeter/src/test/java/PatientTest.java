@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -147,3 +149,4 @@ public class PatientTest
     //       assertFalse(patient.setPostalCode(new PostalCode("A1A-1B1")));
     // }
 }
+

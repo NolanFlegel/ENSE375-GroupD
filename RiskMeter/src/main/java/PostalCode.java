@@ -1,5 +1,6 @@
 
 
+
 /**
  * @author Renz Rivero (SID: 200377174)
  * 
@@ -96,3 +97,4 @@ public class PostalCode
     		return this.postalCode;
     	}
 }
+

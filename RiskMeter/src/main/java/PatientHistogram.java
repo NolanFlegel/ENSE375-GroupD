@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 // Implemented by: Jacob Chapman
 
@@ -54,3 +55,4 @@ public class PatientHistogram
     		return this.patientCount[VIndex][HIndex];
     	}
 }
+
