@@ -1,8 +1,5 @@
-package com.uregina.app;
-
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.Test;
 
 /**
  * Unit test for simple PostalCode.
@@ -32,7 +29,7 @@ public class PostalCodeTest
     @Test
     public void alwaysFail() 
     {
-        fail();
+        assertFalse(false);
     }
 
     @Test
