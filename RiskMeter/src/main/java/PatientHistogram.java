@@ -9,7 +9,9 @@ public class PatientHistogram
 
     	public PatientHistogram() 
     	{
-			patientCount = new patientCount[20][10];
+
+			this.patientCount = new int[20][10];
+
     	}
     	/**
 	*
@@ -19,7 +21,7 @@ public class PatientHistogram
     	{
     		
     		//Assuming there is a region available for that patient, then if the count is greater than 0 return true
-			if(patientCount[VIndex][HIndex] >= 0) 
+			if(this.patientCount[VIndex][HIndex] >= 0) 
 			{
 				return true;
 			}
@@ -36,7 +38,7 @@ public class PatientHistogram
     	public boolean deleteAPatientFromRegion(int VIndex,int HIndex)
     	{
     		// assuming there is a patient available in that region, and if the count is not equal to zero
-    		if(patientCount[VIndex][HIndex] >= 0)
+    		if(this.patientCount[VIndex][HIndex] >= 0)
 			{
 				return true;
 			}
@@ -49,6 +51,6 @@ public class PatientHistogram
     	public int getPatientsCountInRegion(int VIndex,int HIndex) throws IndexOutOfBoundsException
     	{
     		//ToDo: add you code here (you can update the return statement)
-    		return patientCount[VIndex][HIndex];
+    		return this.patientCount[VIndex][HIndex];
     	}
 }
