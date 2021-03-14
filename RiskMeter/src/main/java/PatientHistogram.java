@@ -1,8 +1,7 @@
-
 import java.util.ArrayList;
 // Implemented by: Jacob Chapman
 
-// NOTES: THere was no figure available to display the regions, so I made the assumption of what regions are in the following rectangle and 
+// NOTES: There was no figure available to display the regions, so I made the assumption of what regions are in the following rectangle and 
 //		how many people were in each region.
 public class PatientHistogram 
 {
@@ -10,9 +9,7 @@ public class PatientHistogram
 
     	public PatientHistogram() 
     	{
-
-			this.patientCount = new int[20][10];
-
+			this.patientCount = new patientCount[20][10];
     	}
     	/**
 	*
@@ -55,4 +52,3 @@ public class PatientHistogram
     		return this.patientCount[VIndex][HIndex];
     	}
 }
-
