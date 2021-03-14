@@ -1,4 +1,10 @@
-
+/**
+ * Written by Nolan Flegel
+ * SID: 200250037
+ * Date: March 13, 2021
+ * 
+ * ENSE375 - Group D
+ */
 import java.util.*;
 
 
