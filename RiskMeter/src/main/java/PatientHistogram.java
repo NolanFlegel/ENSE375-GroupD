@@ -9,13 +9,13 @@ public class PatientHistogram
 
     	public PatientHistogram() 
     	{
-			this.patientCount = new patientCount[20][10];
+			this.patientCount = new int[20][10];
     	}
     	/**
 	*
 	* @return boolean: true if the patient can be added from that region 
 	*/
-    	public boolean addAPatientToRegion(int VIndex, int HIndex) //col, row
+    	public boolean addAPatientToRegion(int VIndex, int HIndex) throws IndexOutOfBoundsException//col, row
     	{
     		
     		//Assuming there is a region available for that patient, then if the count is greater than 0 return true
@@ -33,7 +33,7 @@ public class PatientHistogram
 	*
 	* @return boolean: true if the patient can be removed from that region 
 	*/
-    	public boolean deleteAPatientFromRegion(int VIndex,int HIndex)
+    	public boolean deleteAPatientFromRegion(int VIndex,int HIndex) throws IndexOutOfBoundsException
     	{
     		// assuming there is a patient available in that region, and if the count is not equal to zero
     		if(this.patientCount[VIndex][HIndex] >= 0)
