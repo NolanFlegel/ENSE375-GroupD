@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: PatientTest
 -------------------------------------------------------------------------------
-Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in PatientTest
+Tests run: 14, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.01 s <<< FAILURE! - in PatientTest
+setPatientPostalCodeInvalid  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.NullPointerException
+	at PatientTest.setPatientPostalCodeInvalid(PatientTest.java:156)
+

@@ -152,7 +152,9 @@ public class PatientTest
     {
           PostalCode postalCode = new PostalCode("K1A-1A1");
           Patient patient = new Patient("Peter", "123456789", 99, postalCode);
-          assertFalse(patient.setPostalCode(new PostalCode("A1A-1B1")));
+          PostalCode newAddress = new PostalCode("A1A-1B1");
+          boolean setPostalCode = patient.setPostalCode(newAddress);
+          assertFalse(setPostalCode);
     }
 }
 

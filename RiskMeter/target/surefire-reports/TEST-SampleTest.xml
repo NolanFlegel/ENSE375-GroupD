@@ -14,7 +14,7 @@
     <property name="os.name" value="Linux"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire/surefirebooter6672572126478903696.jar /mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire 2021-03-14T10-37-14_292-jvmRun1 surefire5368726330687567380tmp surefire_015223531206539274661tmp"/>
+    <property name="sun.java.command" value="/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire/surefirebooter3788508846025040091.jar /mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire 2021-03-14T19-59-13_593-jvmRun1 surefire15966617418915616626tmp surefire_01485278457893309246tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/test-classes:/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/classes:/home/kadmin/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.1/junit-jupiter-5.7.1.jar:/home/kadmin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar:/home/kadmin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/kadmin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/kadmin/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar:/home/kadmin/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.1/junit-jupiter-params-5.7.1.jar:/home/kadmin/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar:/home/kadmin/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire/surefirebooter6672572126478903696.jar"/>
+    <property name="surefire.real.class.path" value="/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire/surefirebooter3788508846025040091.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9-Ubuntu-0ubuntu1.18.04"/>
     <property name="user.name" value="kadmin"/>

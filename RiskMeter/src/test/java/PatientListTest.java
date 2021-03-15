@@ -33,7 +33,7 @@ public class PatientListTest
     {
         try{
            PatientList patientList = new PatientList();
-        PostalCode postalCode = new PostalCode("123456");
+        PostalCode postalCode = new PostalCode("K1A-1A1");
         Patient patient = new Patient("Steve", "1234", 35, postalCode); 
         
         assertTrue(patientList.addPatient(patient));
@@ -54,7 +54,7 @@ public class PatientListTest
     public void existingPatientGet()
     {
         try{PatientList patientList = new PatientList();
-        PostalCode postalCode = new PostalCode("123456");
+        PostalCode postalCode = new PostalCode("K1A-1A1");
         Patient patient = new Patient("Steve", "1234", 35, postalCode);
         patientList.addPatient(patient);
         assertTrue(patientList.getPatient("1234") == patient);
@@ -80,7 +80,7 @@ public class PatientListTest
     {
         try{
         PatientList patientList = new PatientList();
-        PostalCode postalCode = new PostalCode("123456");
+        PostalCode postalCode = new PostalCode("K1A-1A1");
         Patient patient = new Patient("Steve", "1234", 35, postalCode);
         patientList.addPatient(patient);
         assertTrue(patientList.deletePatient(0)); 
@@ -115,7 +115,7 @@ public class PatientListTest
     {
         try{
           PatientList patientList = new PatientList();
-        PostalCode postalCode = new PostalCode("123456");
+        PostalCode postalCode = new PostalCode("K1A-1A1");
         Patient patient1 = new Patient("Steve", "1234", 35, postalCode);
         Patient patient2 = new Patient("Linda", "4321", 53, postalCode);
         Patient patient3 = new Patient("Bob", "1423", 33, postalCode);
