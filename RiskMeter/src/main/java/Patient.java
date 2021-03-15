@@ -74,7 +74,8 @@ public class Patient
 	*/
 	public boolean setPostalCode(PostalCode postalCode)
 	{
-		if(postalCode.isValidPostalCode(postalCode.getPostalCode())){
+		String newPostalCode = postalCode.getPostalCode();
+		if(postalCode.isValidPostalCode(newPostalCode)){
 			this.postalCode = postalCode;
 			return true;
 		}else{

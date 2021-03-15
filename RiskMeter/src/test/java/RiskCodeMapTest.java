@@ -1,13 +1,8 @@
 //package com.uregina.app;
-
-import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
-
-import static org.junit.Assert.AsserEquals;
-import org.junit.Test;
-
 
 public class RiskCodeMapTest 
 {

@@ -17,6 +17,9 @@ public class PatientHistogram
 	*/
     	public boolean addAPatientToRegion(int VIndex, int HIndex) throws IndexOutOfBoundsException//col, row
     	{
+			if(VIndex < 0 || VIndex > 20 || HIndex < 0 || HIndex > 10){
+				return false;
+			}
     		
     		//Assuming there is a region available for that patient, then if the count is greater than 0 return true
 			if(this.patientCount[VIndex][HIndex] >= 0) 
@@ -36,7 +39,11 @@ public class PatientHistogram
     	public boolean deleteAPatientFromRegion(int VIndex,int HIndex) throws IndexOutOfBoundsException
     	{
     		// assuming there is a patient available in that region, and if the count is not equal to zero
-    		if(this.patientCount[VIndex][HIndex] >= 0)
+    		if(VIndex < 0 || VIndex > 20 || HIndex < 0 || HIndex > 10){
+				return false;
+			}
+
+			if(this.patientCount[VIndex][HIndex] >= 0)
 			{
 				return true;
 			}
