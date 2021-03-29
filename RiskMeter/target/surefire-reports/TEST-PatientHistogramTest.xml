@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="PatientHistogramTest" time="0.001" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="PatientHistogramTest" time="0" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="11"/>
@@ -14,7 +14,7 @@
     <property name="os.name" value="Linux"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire/surefirebooter5621060209014309006.jar /mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire 2021-03-14T20-24-52_917-jvmRun1 surefire16802267235464429543tmp surefire_013594572295849644945tmp"/>
+    <property name="sun.java.command" value="/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire/surefirebooter4574468361272499115.jar /mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire 2021-03-25T14-52-24_473-jvmRun1 surefire7677469879982067741tmp surefire_09463511858890950889tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/test-classes:/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/classes:/home/kadmin/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.1/junit-jupiter-5.7.1.jar:/home/kadmin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar:/home/kadmin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/kadmin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/kadmin/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar:/home/kadmin/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.1/junit-jupiter-params-5.7.1.jar:/home/kadmin/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar:/home/kadmin/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire/surefirebooter5621060209014309006.jar"/>
+    <property name="surefire.real.class.path" value="/mnt/c/Projects/ENSE375-GroupD/RiskMeter/target/surefire/surefirebooter4574468361272499115.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9-Ubuntu-0ubuntu1.18.04"/>
     <property name="user.name" value="kadmin"/>
