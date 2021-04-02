@@ -205,7 +205,7 @@ public class App
     		System.out.println( "\tInvalid PostalCode" );
     	}
 
-    	Patient patient=null;
+    	Patient patient = null;
 
     	try{
     		patient = new Patient(patientName, patientID, patientAge,postalCode);
@@ -223,7 +223,7 @@ public class App
     		return true;
     	}
     	catch(InvalidPostalCodeException e){
-    		System.out.println( "\tInvalid patient ID" );
+    		System.out.println( "\tInvalid patient Postal Code" );
     		return false;
     	}
 
@@ -235,7 +235,7 @@ public class App
 
     	int HIndex=postalCode.getRegionHorizontalIndex();
     	int VIndex=postalCode.getRegionVerticalIndex();
-
+		
     	if(!histogram.addAPatientToRegion(VIndex,HIndex))
     	{
     		System.out.println( "\tFailed to assign  a patient to a region" );
