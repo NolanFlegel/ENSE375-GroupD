@@ -1,3 +1,12 @@
+/**
+ * Written by Nolan Flegel
+ * SID: 200250037
+ * Date: March 13, 2021
+ * 
+ * ENSE375 - Group D
+ */
+import java.util.*;
+
 
 public class Patient 
 {
@@ -5,39 +14,59 @@ public class Patient
 	private String ID;
 	private int age;
 	private PostalCode postalCode;
+	private String nameRegex ="^[a-zA-Z\\s\\.]*$";
+	private String idRegex = "^[1-9]{9}";
 	
 	public Patient(String name, String ID, int age, PostalCode postalCode) throws InvalidNameException, InvalidAgeException ,InvalidIDException, InvalidPostalCodeException
 	{
-		//ToDo: add you code here
+
+		if (!name.matches(this.nameRegex))
+		{throw new InvalidNameException(name);}
+		if (!ID.matches(this.idRegex))
+		{throw new InvalidIDException(ID);}
+		if(!this.setAge(age))
+		{throw new InvalidAgeException(age);}
+		// if(!postalCode.setPostalCode(postalCode.getPostalCode()))
+		// {throw new InvalidPostalCodeException();}
+		this.name = name;
+		this.ID = ID;
+		this.age = age;
+		this.postalCode = postalCode;
 	}
 	public String getName()
 	{
-		//ToDo: add your code here (you can update the return statement)
-		return "";
+		return this.name;
 	}
 	public String getID()
 	{
-		//ToDo: add your code here (you can update the return statement) 
-		return "";
+		 
+		return this.ID;
 	}
 	public int getAge()
 	{
-		//ToDo: add your code here (you can update the return statement) 
-		return 0;
+		
+		return this.age;
 	}
 	public PostalCode getPostalCode()
 	{	
-		//ToDo: add your code here (you can update the return statement)
-		return null;
+		
+		return this.postalCode;
 	}
 	/**
 	*
 	* @return boolean: true if the age is corrected set 
 	*/
 	public boolean setAge(int age)
-	{	
-		//ToDo: add your code here
-		return true;
+	{	//assumption human age can be between 0 and 130
+
+		if (age > 0 && age < 130){
+			this.age = age;
+			return true;
+		}else{
+			return false;
+		}
+		
+		
 	}
 	/**
 	*
@@ -45,7 +74,15 @@ public class Patient
 	*/
 	public boolean setPostalCode(PostalCode postalCode)
 	{
-		//ToDo: add your code here
-		return true;
+		String newPostalCode = postalCode.getPostalCode();
+		if(postalCode.isValidPostalCode(newPostalCode)){
+			this.postalCode = postalCode;
+			return true;
+		}else{
+			return false;
+		}
+
+		
 	}
 }
+

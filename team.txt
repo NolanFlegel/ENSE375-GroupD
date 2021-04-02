@@ -6,3 +6,12 @@ Members:
 	Krupalkumar Patel
 	Renz Rivero
 	Shane Toma
+
+
+Task 4 Assignments
+
+	AWS and jenkins pipeline setup - Nolan
+	Test cases for addPatient - Shane
+	Correct Implementation addPatient- Jacob
+	Test cases for deletePatient - Krupalkumar
+	Correct Implementation for deletePatient - Renz

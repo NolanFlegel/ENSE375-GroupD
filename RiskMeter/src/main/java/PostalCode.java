@@ -1,5 +1,5 @@
-package com.uregina.app;
-import com.uregina.exception.*;
+
+
 
 /**
  * @author Renz Rivero (SID: 200377174)
@@ -75,6 +75,9 @@ public class PostalCode
 		
     	public PostalCode(String postalCode) throws InvalidPostalCodeException
     	{
+			if(isValidPostalCode(postalCode)){
+				this.postalCode = postalCode;	
+			}
 			//ToDo: add you code here
 			if (postalCode == null)
 			{
@@ -106,3 +109,4 @@ public class PostalCode
     		return this.postalCode;
     	}
 }
+
