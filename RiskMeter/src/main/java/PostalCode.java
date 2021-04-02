@@ -76,6 +76,15 @@ public class PostalCode
     	public PostalCode(String postalCode) throws InvalidPostalCodeException
     	{
 			//ToDo: add you code here
+			if (postalCode == null)
+			{
+				throw new InvalidPostalCodeException();
+			}
+			else if (!isValidPostalCode(postalCode))
+			{
+				throw new InvalidPostalCodeException();
+			}
+
 			this.postalCode = postalCode;
 		}
 		
