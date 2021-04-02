@@ -1,28 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: RemovePatientTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in RemovePatientTest
-deleteIfId_True  Time elapsed: 0 s  <<< ERROR!
-java.lang.NullPointerException
-	at RemovePatientTest.deleteIfId_True(RemovePatientTest.java:27)
-
-dontDeleteIfId_Invalid  Time elapsed: 0 s  <<< ERROR!
-java.lang.NullPointerException
-	at RemovePatientTest.dontDeleteIfId_Invalid(RemovePatientTest.java:93)
-
-dontDeleteIfId_Empty  Time elapsed: 0 s  <<< ERROR!
-java.lang.NullPointerException
-	at RemovePatientTest.dontDeleteIfId_Empty(RemovePatientTest.java:79)
-
-dontDeleteIfId_False  Time elapsed: 0 s  <<< ERROR!
-java.lang.NullPointerException
-	at RemovePatientTest.dontDeleteIfId_False(RemovePatientTest.java:40)
-
-dontDeleteIfId_Short  Time elapsed: 0 s  <<< ERROR!
-java.lang.NullPointerException
-	at RemovePatientTest.dontDeleteIfId_Short(RemovePatientTest.java:53)
-
-dontDeleteIfId_Long  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.NullPointerException
-	at RemovePatientTest.dontDeleteIfId_Long(RemovePatientTest.java:66)
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in RemovePatientTest
+deleteIfId_True  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at RemovePatientTest.deleteIfId_True(RemovePatientTest.java:29)
 

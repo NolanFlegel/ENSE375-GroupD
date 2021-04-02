@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: PatientTest
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in PatientTest
-createNewPatientIDTooLong  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected InvalidNameException to be thrown, but nothing was thrown.
-	at PatientTest.createNewPatientIDTooLong(PatientTest.java:70)
-
-createNewPatientIDInvalidDigit  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected InvalidNameException to be thrown, but nothing was thrown.
-	at PatientTest.createNewPatientIDInvalidDigit(PatientTest.java:56)
-
-createNewPatientNameInvalidChar  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected InvalidNameException to be thrown, but nothing was thrown.
-	at PatientTest.createNewPatientNameInvalidChar(PatientTest.java:39)
-
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in PatientTest
