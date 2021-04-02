@@ -229,6 +229,8 @@ public class App
     * @param patientAge 	an integer contains the age of the patient that should be added
     * @return boolean which is false if it failed
     */
+
+	// Author changes: Jacob Chapman
     public boolean addPatient(String patientName, String patientID, String patientpostalCode, int patientAge)
     {
     	PostalCode postalCode=null;
@@ -282,20 +284,16 @@ public class App
 
     	for (int i=-1; i<=1; i+=2)
 		{
+			// neighbor case index at 0 cant be negative
 			if(VIndex == 0)
 			{
-				i = 1;
+				i = 1; // this will make sure at index 0 it will only get the 1 neighbor 
 			}
-			
-			try{
 				
-    			neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i,HIndex));
-			}
-			catch(InvalidIndexException e)
-			{
-				System.out.println( "\tInvalid Vertical Index" );
-    			return false;
-			}
+    		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i,HIndex));
+			
+
+			
     	}
     	for (int i=-1; i<=1; i+=2)
 		{
@@ -303,14 +301,9 @@ public class App
 			{
 				i = 1;
 			}
-			try{
+			
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
-			}
-			catch(InvalidIndexException e)
-			{
-				System.out.println( "\tInvalid Horizontal Index" );
-    			return false;
-			}
+			
     	}
 
     	if(!riskCodeMap.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount))
