@@ -184,8 +184,9 @@ public class App
 			{
 				neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i, HIndex));
 			}
+		}
 
-    	for (int i=-1; i<=1; i+=2)
+    	for (int j=-1; i<=1; i+=2)
 		{
     		
 			if ((HIndex + i) < MIN_HORIZONTAL_INDEX_DIGIT)
