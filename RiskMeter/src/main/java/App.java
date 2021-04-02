@@ -236,15 +236,6 @@ public class App
     	PostalCode postalCode= new PostalCode();
 		Patient patient = new Patient();
 
-    	// try{
-    	// 	PostalCode postalCode = new PostalCode(patientpostalCode);
-    	// }
-    	// catch(InvalidPostalCodeException e){
-    	// 	System.out.println( "\tInvalid PostalCode" );
-    	// }
-
-    	//Patient patient = null;
-
     	try{
 			postalCode = new PostalCode(patientpostalCode);
     		patient = new Patient(patientName, patientID, patientAge,postalCode);

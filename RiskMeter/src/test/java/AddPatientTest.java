@@ -92,6 +92,6 @@ public class AddPatientTest {
     @Test
     public void All_Valid () {
         App app = new App();
-        assertTrue(app.addPatient("Jim", "123456789", "k1s-3X3", 27));
+        assertTrue(app.addPatient("Jim", "123456789", "K1S-3X3", 27));
     }
 }
