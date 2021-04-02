@@ -186,7 +186,7 @@ public class App
 			}
 		}
 
-    	for (int j=-1; i<=1; i+=2)
+    	for (int i=-1; i<=1; i+=2)
 		{
     		
 			if ((HIndex + i) < MIN_HORIZONTAL_INDEX_DIGIT)
