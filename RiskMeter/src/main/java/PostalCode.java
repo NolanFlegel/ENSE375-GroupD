@@ -79,7 +79,16 @@ public class PostalCode
 				this.postalCode = postalCode;	
 			}
 			//ToDo: add you code here
-			
+			if (postalCode == null)
+			{
+				throw new InvalidPostalCodeException();
+			}
+			else if (!isValidPostalCode(postalCode))
+			{
+				throw new InvalidPostalCodeException();
+			}
+
+			this.postalCode = postalCode;
 		}
 		
     	public char getRegionVerticalIndex()

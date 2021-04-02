@@ -146,34 +146,68 @@ public class App
     public boolean deletePatient(String patientID)
     {
     	Patient patient=patientList.getPatient(patientID);
-    	if(patient==null)
+
+    	if(patient == null)
     	{
     		System.out.println( "\tPatient Not Found" );
+			return false;
     	}
+
     	int HIndex=patient.getPostalCode().getRegionHorizontalIndex();
     	int VIndex=patient.getPostalCode().getRegionVerticalIndex();
+
     	if(!histogram.deleteAPatientFromRegion(VIndex,HIndex))
     	{
 	    	System.out.println( "\tFailed to update the patient Count" );
+			return false;
     	}
-    	int caseCount=histogram.getPatientsCountInRegion(VIndex,HIndex);
-    	ArrayList<Integer> neighboursCaseCount= new ArrayList<Integer> ();
 
+    	int caseCount = histogram.getPatientsCountInRegion(VIndex,HIndex);
+		final int A_ASCII_CODE = 65;
+		final int T_ASCII_code = 84;
+		final int MAX_HORIZONTAL_INDEX_DIGIT = 9;
+		final int MIN_HORIZONTAL_INDEX_DIGIT = 0;
+
+    	ArrayList<Integer> neighboursCaseCount= new ArrayList<Integer>();
 
     	for (int i=-1; i<=1; i+=2)
 		{
-    		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i,HIndex));
-    	}
-    	for (int i=-1;i<=1;i+=2){
-    		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
-    	}
+			if ((VIndex + i) < A_ASCII_CODE)
+			{
+				neighboursCaseCount.add(histogram.getPatientsCountInRegion(T_ASCII_code, HIndex));
+			}
+			else if ((VIndex + i) > T_ASCII_code)
+			{
+				neighboursCaseCount.add(histogram.getPatientsCountInRegion(A_ASCII_CODE, HIndex));
+			}
+			else
+			{
+				neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i, HIndex));
+			}
 
-
-    	if(!riskCodeMap.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount))
+    	for (int i=-1; i<=1; i+=2)
+		{
+    		
+			if ((HIndex + i) < MIN_HORIZONTAL_INDEX_DIGIT)
+			{
+				neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex, MAX_HORIZONTAL_INDEX_DIGIT));
+			}
+			else if (HIndex > MAX_HORIZONTAL_INDEX_DIGIT)
+			{
+				neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex, MIN_HORIZONTAL_INDEX_DIGIT));
+			}
+			else
+			{
+				neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex, HIndex+i));
+			}
+    	}
+        
+    	if (!riskCodeMap.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount))
     	{
     		System.out.println( "\tFailed to update the risk code map" );
     		return false;
     	}
+
     	return true;
     }
     /**
