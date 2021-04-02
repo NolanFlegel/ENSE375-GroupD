@@ -246,8 +246,6 @@ public class App
 
     	try{
     		patient = new Patient(patientName, patientID, patientAge,postalCode);
-    	}
-    		System.out.println( "\tInvalid patient name" );
 		}
 		catch(InvalidNameException e){
     		System.out.println( "\tInvalid patient name: "+patientName );
