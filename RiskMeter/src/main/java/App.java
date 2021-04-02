@@ -247,20 +247,22 @@ public class App
     	try{
     		patient = new Patient(patientName, patientID, patientAge,postalCode);
     	}
-    	catch(InvalidNameException e){
     		System.out.println( "\tInvalid patient name" );
+		}
+		catch(InvalidNameException e){
+    		System.out.println( "\tInvalid patient name: "+patientName );
     		return false;
     	}
     	catch(InvalidAgeException e){
-    		System.out.println( "\tInvalid patient age" );
+    		System.out.println( "\tInvalid patient age: "+patientAge );
     		return false;
     	}
     	catch(InvalidIDException e){
-    		System.out.println( "\tInvalid patient ID" );
+    		System.out.println( "\tInvalid patient ID: "+patientID );
     		return true;
     	}
     	catch(InvalidPostalCodeException e){
-    		System.out.println( "\tInvalid patient Postal Code" );
+    		System.out.println( "\tInvalid patient Postal Code: "+patientpostalCode );
     		return false;
     	}
 
