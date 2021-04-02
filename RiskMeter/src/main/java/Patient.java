@@ -19,19 +19,40 @@ public class Patient
 	
 	public Patient(String name, String ID, int age, PostalCode postalCode) throws InvalidNameException, InvalidAgeException ,InvalidIDException, InvalidPostalCodeException
 	{
+		boolean invalidPatient = true;
 
 		if (!name.matches(this.nameRegex))
-		{throw new InvalidNameException(name);}
-		if (!ID.matches(this.idRegex))
-		{throw new InvalidIDException(ID);}
-		if(!this.setAge(age))
-		{throw new InvalidAgeException(age);}
-		// if(!postalCode.setPostalCode(postalCode.getPostalCode()))
-		// {throw new InvalidPostalCodeException();}
+		{
+			invalidPatient =false;
+			throw new InvalidNameException(name);
+			
+		}
+		else if (!ID.matches(this.idRegex))
+		{	
+			invalidPatient =false;
+			throw new InvalidIDException(ID);
+			
+		}
+		else if(!this.setAge(age))
+		{	
+			invalidPatient =false;
+			throw new InvalidAgeException(age);
+			
+		}
+		else if(!postalCode.isValidPostalCode(postalCode.getPostalCode()))
+		{
+			invalidPatient =false;
+			throw new InvalidPostalCodeException();
+			
+		}
+		
+		if(invalidPatient){
 		this.name = name;
 		this.ID = ID;
 		this.age = age;
 		this.postalCode = postalCode;
+		}
+		
 	}
 	public String getName()
 	{

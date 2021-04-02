@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: AddPatientTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 0.081 s <<< FAILURE! - in AddPatientTest
+Invalid_Postal_Code_Too_Short  Time elapsed: 0.06 s  <<< ERROR!
+java.lang.NullPointerException
+	at AddPatientTest.Invalid_Postal_Code_Too_Short(AddPatientTest.java:62)
+
+Invalid_Postal_Code_6th_Pos  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at AddPatientTest.Invalid_Postal_Code_6th_Pos(AddPatientTest.java:38)
+
+Invalid_Postal_Code_7th_Pos  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException
+	at AddPatientTest.Invalid_Postal_Code_7th_Pos(AddPatientTest.java:46)
+
+Invalid_Postal_Code_Too_Long  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException
+	at AddPatientTest.Invalid_Postal_Code_Too_Long(AddPatientTest.java:54)
+
+Invalid_Postal_Code_3rd_Pos  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at AddPatientTest.Invalid_Postal_Code_3rd_Pos(AddPatientTest.java:22)
+
+Invalid_Age_150  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at AddPatientTest.Invalid_Age_150(AddPatientTest.java:87)
+
+Invalid_Age_Neg  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at AddPatientTest.Invalid_Age_Neg(AddPatientTest.java:79)
+
+Invalid_Name  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException
+	at AddPatientTest.Invalid_Name(AddPatientTest.java:71)
+
+All_Valid  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException
+	at AddPatientTest.All_Valid(AddPatientTest.java:95)
+
+Invalid_Postal_Code_5th_Pos  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at AddPatientTest.Invalid_Postal_Code_5th_Pos(AddPatientTest.java:30)
+

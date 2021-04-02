@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse; //Assert False
 
 //String patientName,String patientID,String patientpostalCode, int patientAge
 
-public class addPatientTest {
+public class AddPatientTest {
 
 
     //Test1
