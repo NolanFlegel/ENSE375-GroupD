@@ -4,6 +4,11 @@
 # Log file
 *.log
 
+# Maven Logs
+target/**
+**/maven-status
+**/surefire-logs
+
 # BlueJ files
 *.ctxt
 
