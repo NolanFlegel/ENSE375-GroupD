@@ -233,21 +233,23 @@ public class App
 	// Author changes: Jacob Chapman
     public boolean addPatient(String patientName, String patientID, String patientpostalCode, int patientAge)
     {
-    	PostalCode postalCode=null;
+    	PostalCode postalCode= new PostalCode();
+		Patient patient = new Patient();
+
+    	// try{
+    	// 	PostalCode postalCode = new PostalCode(patientpostalCode);
+    	// }
+    	// catch(InvalidPostalCodeException e){
+    	// 	System.out.println( "\tInvalid PostalCode" );
+    	// }
+
+    	//Patient patient = null;
 
     	try{
-    		postalCode = new PostalCode(patientpostalCode);
-    	}
-    	catch(InvalidPostalCodeException e){
-    		System.out.println( "\tInvalid PostalCode" );
-    	}
-
-    	Patient patient = null;
-
-    	try{
+			postalCode = new PostalCode(patientpostalCode);
     		patient = new Patient(patientName, patientID, patientAge,postalCode);
-    	}
-    	catch(InvalidNameException e){
+		}
+		catch(InvalidNameException e){
     		System.out.println( "\tInvalid patient name" );
     		return false;
     	}
