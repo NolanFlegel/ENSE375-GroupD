@@ -19,7 +19,7 @@ public class AddPatientTest {
     @Test
     public void Invalid_Postal_Code_3rd_Pos () {
         App app = new App();
-        assertFalse(app.addPatient("Jim", "123456789", "k1u-3X3", 27));
+        assertFalse(app.addPatient("Jim", "123456789", "K1U-3X3", 27));
     }
 
     //Test2
@@ -27,7 +27,7 @@ public class AddPatientTest {
     @Test
     public void Invalid_Postal_Code_5th_Pos () {
         App app = new App();
-        assertFalse(app.addPatient("Jim", "123456789", "k1s-pX3", 27));
+        assertFalse(app.addPatient("Jim", "123456789", "K1S-PX3", 27));
     }
 
     //Test3
@@ -35,7 +35,7 @@ public class AddPatientTest {
     @Test
     public void Invalid_Postal_Code_6th_Pos () {
         App app = new App();
-        assertFalse(app.addPatient("Jim", "123456789", "k1s-3l3", 27));
+        assertFalse(app.addPatient("Jim", "123456789", "K1S-3l3", 27));
     }
 
     //Test4
@@ -43,7 +43,7 @@ public class AddPatientTest {
     @Test
     public void Invalid_Postal_Code_7th_Pos () {
         App app = new App();
-        assertFalse(app.addPatient("Jim", "123456789", "k1s-3X!", 27));
+        assertFalse(app.addPatient("Jim", "123456789", "K1S-3X!", 27));
     }
 
     //Test5
@@ -51,7 +51,7 @@ public class AddPatientTest {
     @Test
     public void Invalid_Postal_Code_Too_Long() {
         App app = new App();
-        assertFalse(app.addPatient("Jim", "123456789", "k1s-3l3123", 27));
+        assertFalse(app.addPatient("Jim", "123456789", "K1S-3l3123", 27));
     }
 
     //Test6
@@ -59,7 +59,7 @@ public class AddPatientTest {
     @Test
     public void Invalid_Postal_Code_Too_Short () {
         App app = new App();
-        assertFalse(app.addPatient("Jim", "123456789", "k1s-3l", 27));
+        assertFalse(app.addPatient("Jim", "123456789", "K1S-3l", 27));
     }
    
 
@@ -68,7 +68,7 @@ public class AddPatientTest {
     @Test
     public void Invalid_Name () {
         App app = new App();
-        assertFalse(app.addPatient("Jim!!", "123456789", "k1s-3X3", 27));
+        assertFalse(app.addPatient("Jim!!", "123456789", "K1S-3X3", 27));
     }
 
     //Test8
@@ -76,7 +76,7 @@ public class AddPatientTest {
     @Test
     public void Invalid_Age_Neg () {
         App app = new App();
-        assertFalse(app.addPatient("Jim", "123456789", "k1s-3X3", -27));
+        assertFalse(app.addPatient("Jim", "123456789", "K1S-3X3", -27));
     }
 
     //Test9
@@ -84,7 +84,7 @@ public class AddPatientTest {
     @Test
     public void Invalid_Age_150 () {
         App app = new App();
-        assertFalse(app.addPatient("Jim", "123456789", "k1s-3X3", 150));
+        assertFalse(app.addPatient("Jim", "123456789", "K1S-3X3", 150));
     }
 
     //Test10

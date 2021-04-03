@@ -156,6 +156,9 @@ public class App
     	int HIndex=patient.getPostalCode().getRegionHorizontalIndex();
     	int VIndex=patient.getPostalCode().getRegionVerticalIndex();
 
+		// int HIndex=postalCode.getRegionHorizontalIndex();
+    	// int VIndex=postalCode.getRegionVerticalIndex();
+
     	if(!histogram.deleteAPatientFromRegion(VIndex,HIndex))
     	{
 	    	System.out.println( "\tFailed to update the patient Count" );
@@ -163,8 +166,8 @@ public class App
     	}
 
     	int caseCount = histogram.getPatientsCountInRegion(VIndex,HIndex);
-		final int A_ASCII_CODE = 65;
-		final int T_ASCII_code = 84;
+		final int A_ASCII_CODE = 0;//65;
+		final int T_ASCII_code = 0;//84;
 		final int MAX_HORIZONTAL_INDEX_DIGIT = 9;
 		final int MIN_HORIZONTAL_INDEX_DIGIT = 0;
 
@@ -256,45 +259,36 @@ public class App
     		System.out.println( "\tInvalid patient Postal Code: "+patientpostalCode );
     		return false;
     	}
-
-    	if(!patientList.addPatient(patient))
-    	{
-    		System.out.println( "\tFailed to add a patient to a patientList" );
-    		return false;
-    	}
-
-    	int HIndex=postalCode.getRegionHorizontalIndex();
-    	int VIndex=postalCode.getRegionVerticalIndex();
 		
-    	if(!histogram.addAPatientToRegion(VIndex,HIndex))
+		int HIndex=postalCode.getRegionHorizontalIndex();
+    	int VIndex=postalCode.getRegionVerticalIndex();
+    	
+		if(!patientList.addPatient(patient))
     	{
+			if(!histogram.addAPatientToRegion(VIndex,HIndex))
+    		{
     		System.out.println( "\tFailed to assign  a patient to a region" );
+			
+    		return false;
+    		}
+    		
+			System.out.println( "\tFailed to add a patient to a patientList" );
     		return false;
     	}
+
+		
+    	
 
     	int caseCount=histogram.getPatientsCountInRegion(VIndex,HIndex);
     	ArrayList<Integer> neighboursCaseCount= new ArrayList<Integer> ();
 
     	for (int i=-1; i<=1; i+=2)
-		{
-			// neighbor case index at 0 cant be negative
-			if(VIndex == 0)
-			{
-				i = 1; // this will make sure at index 0 it will only get the 1 neighbor 
-			}
-				
+		{				
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i,HIndex));
-			
-
-			
+					
     	}
     	for (int i=-1; i<=1; i+=2)
 		{
-			if(HIndex == 0)
-			{
-				i = 1;
-			}
-			
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
 			
     	}

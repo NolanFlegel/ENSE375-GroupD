@@ -24,7 +24,7 @@ public class RemovePatientTest {
 
         App app = new App();
         String deletingPatientId = "123456789"; //sample id of patient
-        app.addPatient("Trace", "123456789", "k1s-3X3", 42); // sample patient entry
+        app.addPatient("Trace", "123456789", "K1S-3X3", 42); // sample patient entry
 
         assertTrue(app.deletePatient(deletingPatientId));
 
@@ -37,7 +37,7 @@ public class RemovePatientTest {
 
         App app = new App();
         String deletingPatientId = "123456780";
-        app.addPatient("Trace", "123456789", "k1s-3X3", 42); 
+        app.addPatient("Trace", "123456789", "K1S-3X3", 42); 
 
         assertFalse(app.deletePatient(deletingPatientId));
 
@@ -50,7 +50,7 @@ public class RemovePatientTest {
 
         App app = new App();
         String deletingPatientId = "12345678";
-        app.addPatient("Trace", "123456789", "k1s-3X3", 42); 
+        app.addPatient("Trace", "123456789", "K1S-3X3", 42); 
 
         assertFalse(app.deletePatient(deletingPatientId));
 
@@ -63,7 +63,7 @@ public class RemovePatientTest {
 
         App app = new App();
         String deletingPatientId = "1234567899";
-        app.addPatient("Trace", "123456789", "k1s-3X3", 42); 
+        app.addPatient("Trace", "123456789", "K1S-3X3", 42); 
 
         assertFalse(app.deletePatient(deletingPatientId));
 
@@ -76,7 +76,7 @@ public class RemovePatientTest {
 
         App app = new App();
         String deletingPatientId = " ";
-        app.addPatient("Trace", "123456789", "k1s-3X3", 42); 
+        app.addPatient("Trace", "123456789", "K1S-3X3", 42); 
 
 
         assertFalse(app.deletePatient(deletingPatientId));
@@ -90,7 +90,7 @@ public class RemovePatientTest {
 
         App app = new App();
         String deletingPatientId = "lskjflkj";
-        app.addPatient("Trace", "123456789", "k1s-3X3", 42); 
+        app.addPatient("Trace", "123456789", "K1S-3X3", 42); 
 
         assertFalse(app.deletePatient(deletingPatientId));
 

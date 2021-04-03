@@ -15,22 +15,14 @@ public class PatientHistogram
 	*
 	* @return boolean: true if the patient can be added from that region 
 	*/
-    	public boolean addAPatientToRegion(int VIndex, int HIndex) throws IndexOutOfBoundsException//col, row
+    	public boolean addAPatientToRegion(int VIndex, int HIndex) throws IndexOutOfBoundsException 
     	{
 			if(VIndex < 0 || VIndex > 20 || HIndex < 0 || HIndex > 10){
 				return false;
 			}
     		
-    		//Assuming there is a region available for that patient, then if the count is greater than 0 return true
-			if(this.patientCount[VIndex][HIndex] >= 0) 
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-			
+			this.patientCount[VIndex][HIndex]++;
+			return true;
     	}
 	/**
 	*
@@ -43,14 +35,13 @@ public class PatientHistogram
 				return false;
 			}
 
-			if(this.patientCount[VIndex][HIndex] >= 0)
-			{
-				return true;
+			this.patientCount[VIndex][HIndex]--;
+
+			if(this.patientCount[VIndex][HIndex]<0){
+				this.patientCount[VIndex][HIndex]=0;
 			}
-			else
-			{
-				return false;
-			}
+			return true;
+			
     	
     	}
     	public int getPatientsCountInRegion(int VIndex,int HIndex) throws IndexOutOfBoundsException

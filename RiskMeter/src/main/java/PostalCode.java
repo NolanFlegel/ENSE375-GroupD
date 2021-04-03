@@ -88,17 +88,20 @@ public class PostalCode
 			this.postalCode = postalCode;
 		}
 		
-    	public char getRegionVerticalIndex()
+    	public int getRegionVerticalIndex()
     	{
 			//ToDo: add your code here (you can update the return statement) - *** changed the return value from int to char ***
-			char verticalIndex = Character.toUpperCase(postalCode.charAt(2));
-			return verticalIndex;
+			//Character vIndex = Character.getNumericValue(codePoint)
+
+			//int a = Integer.parseInt(String.valueOf(postalCode.charAt(2)));
+    		return Character.getNumericValue(postalCode.charAt(2))-10;
     	}
-    	public char getRegionHorizontalIndex()
+    	public int getRegionHorizontalIndex()
     	{
 			//ToDo: add your code here (you can update the return statement) - *** changed the return value from int to char ***
-			char horizontalIndex = postalCode.charAt(4);
-    		return horizontalIndex;
+			//int horizontalIndex = Character.getNumericValue(postalCode.charAt(4));
+			int a = Integer.parseInt(String.valueOf(postalCode.charAt(4)));
+    		return a;
     	}
     	public String getPostalCode()
     	{

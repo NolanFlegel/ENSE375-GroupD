@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: AddPatientTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.093 s <<< FAILURE! - in AddPatientTest
-All_Valid  Time elapsed: 0.021 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at AddPatientTest.All_Valid(AddPatientTest.java:95)
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.095 s <<< FAILURE! - in AddPatientTest
+Invalid_Postal_Code_6th_Pos  Time elapsed: 0.017 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+	at AddPatientTest.Invalid_Postal_Code_6th_Pos(AddPatientTest.java:38)
 
