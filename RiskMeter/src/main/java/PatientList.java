@@ -48,10 +48,16 @@ public class PatientList
     	public Patient getPatient(String ID)
     	{
     		//ToDo: add you code here
-			for(int i = 0; i < this.patientList.size(); i++){
-			if(this.patientList.get(i).getID() == ID)
-				System.out.println("Patient " + ID + " Found.");
-				return this.patientList.get(i);
+			
+			for(int i = 0; i < this.patientList.size(); i++)
+			{
+				String patientID = this.patientList.get(i).getID();
+				//if(this.patientList.get(i).getID() == ID)
+				if(patientID.equals(ID))
+				{
+					System.out.println("Patient " + ID + " Found.");
+					return this.patientList.get(i);
+				}
 			}
 			System.out.println("Patient " + ID + " Is Not on The List.");
     		return null;
