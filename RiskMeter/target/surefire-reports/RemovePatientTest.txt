@@ -14,7 +14,7 @@ dontDeleteIfId_False  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at RemovePatientTest.dontDeleteIfId_False(RemovePatientTest.java:42)
 
-dontDeleteIfId_Short  Time elapsed: 0 s  <<< FAILURE!
+dontDeleteIfId_Short  Time elapsed: 0.001 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at RemovePatientTest.dontDeleteIfId_Short(RemovePatientTest.java:55)
 
