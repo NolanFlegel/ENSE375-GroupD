@@ -11,7 +11,7 @@ pipeline {
     stage('Change Directory') {
       steps {
         dir(path: 'RiskMeter') {
-          sh 'mvn test'
+          sh 'mvn clean test'
         }
 
       }

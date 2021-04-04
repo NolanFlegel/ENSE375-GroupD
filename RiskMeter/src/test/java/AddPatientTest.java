@@ -35,7 +35,7 @@ public class AddPatientTest {
     @Test
     public void Invalid_Postal_Code_6th_Pos () {
         App app = new App();
-        assertFalse(app.addPatient("Jim", "123456789", "K1S-3l3", 27));
+        assertFalse(app.addPatient("Jim", "123456789", "K1S-3!3", 27));
     }
 
     //Test4

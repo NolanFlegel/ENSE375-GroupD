@@ -1,24 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: RemovePatientTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in RemovePatientTest
-dontDeleteIfId_Invalid  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at RemovePatientTest.dontDeleteIfId_Invalid(RemovePatientTest.java:95)
-
-dontDeleteIfId_Empty  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at RemovePatientTest.dontDeleteIfId_Empty(RemovePatientTest.java:82)
-
-dontDeleteIfId_False  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at RemovePatientTest.dontDeleteIfId_False(RemovePatientTest.java:42)
-
-dontDeleteIfId_Short  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at RemovePatientTest.dontDeleteIfId_Short(RemovePatientTest.java:55)
-
-dontDeleteIfId_Long  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
-	at RemovePatientTest.dontDeleteIfId_Long(RemovePatientTest.java:68)
-
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in RemovePatientTest
