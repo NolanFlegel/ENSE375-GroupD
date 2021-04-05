@@ -19,11 +19,11 @@ pipeline {
 
   stages {
 
-    stage('Cloning our Git') {
+    /*stage('Cloning our Git') {
       steps {
         git 'https://github.com/NolanFlegel/ENSE375-GroupD.git'
       }
-    }
+    }*/
 
     stage('Change Directory') {
       steps {
