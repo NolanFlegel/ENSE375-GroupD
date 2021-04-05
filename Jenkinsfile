@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Unit tests') { 
             steps {
-              dir(path: 'ProbelyTests') {
+              dir(path: 'RiskMeter') {
                 sh 'mvn clean test'
             }
           }
