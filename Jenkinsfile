@@ -7,17 +7,8 @@ pipeline {
   dockerImage = ''
   }
 
-  agent {
-    docker {
-      image 'maven:3-alpine'
-      args '-v /root/.m2:/root/.m2'
-    }
-
-  }
-  
- 
-
-  stages {
+ agent any
+ stages {
 
     /*stage('Cloning our Git') { 
       steps {
@@ -25,8 +16,16 @@ pipeline {
       }
     }*/
 
-    stage('Change Directory') {
+    stage('Change Directory and Run Tests') {
+      agent {
+            docker {
+                image 'maven:3-alpine'
+                args '-v /root/.m2:/root/.m2'
+                    }
+
+                }
       steps {
+         
         dir(path: 'RiskMeter') {
           sh 'mvn clean test'
         }
