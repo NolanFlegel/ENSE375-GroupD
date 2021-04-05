@@ -5,9 +5,9 @@
 *.log
 
 # Maven Logs
-target/**
-**/maven-status
-**/surefire-logs
+target\**
+**\maven-status
+**\surefire-logs
 
 # BlueJ files
 *.ctxt
